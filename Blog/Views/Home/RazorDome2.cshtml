@@ -1,0 +1,33 @@
+﻿@using Blog.Models
+@model IEnumerable<Student>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RazorDome2</title>
+</head>
+<body>
+    <div>
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>@item.Name</li>
+            }
+        </ul>
+
+        viewdata传值：@ViewData["msg"]
+        @{
+            Student stu = ViewData["stu"] as Student;
+        }
+        <input type="text" value="@stu.Name" />
+        <br />
+        viewbag传值：@ViewBag.A
+        <input type="text" value="@ViewBag.Student1.Name" />
+    </div>
+</body>
+</html>

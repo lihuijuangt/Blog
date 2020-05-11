@@ -1,0 +1,12 @@
+﻿@model  List<Blog.Models.UIData>
+<h2>我的相册</h2>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li><a href="#"><img src="/@item.PicUrl"></a></li>
+
+    }
+
+
+
+</ul>

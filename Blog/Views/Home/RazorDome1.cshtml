@@ -1,0 +1,61 @@
+﻿@using Blog.Models;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RazorDome1</title>
+</head>
+<body>
+    @DateTime.Now.ToString()<br />
+    @("我们都一样".ToString())
+    @{ 
+        int a = 2;
+        int b = 4;
+    }
+    <br />
+    a+b的值是：@(a+b)
+    <br />
+    @Request.Url
+    <br />
+    @{ 
+        Student stu = new Student { Id = 1, Name = "张三" };
+    }
+    <h5>学生姓名：@stu.Name</h5>
+
+
+
+    @{ 
+         List<Student> lis = new List<Student>();
+         lis.Add(new Student { Id = 1, Name = "张三1" });
+         lis.Add(new Student { Id = 2, Name = "张三2" });
+         lis.Add(new Student { Id = 3, Name = "张三3" });
+         lis.Add(new Student { Id = 4, Name = "张三4" });
+
+    }
+
+<ul>
+    @foreach (var item in lis)
+    {
+        if (item.Id > 2)
+        {
+            <li style="color:darkred">@item.Id:@item.Name</li>
+        }
+        else
+        {
+            
+            <li><span>编号：@item.Id</span> <b>姓名：@item.Name@@</b></li>
+        }
+
+    }
+
+</ul>
+
+
+
+</body>
+</html>
