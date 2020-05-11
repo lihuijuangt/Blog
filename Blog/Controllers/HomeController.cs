@@ -19,7 +19,7 @@ namespace Blog.Controllers
             //----------------------
             //测试
             List<Articles> lis = ArticleServices.GetArticles();
-            int a = 0;
+            int a = 0;//更改必须推送？
             return View(lis);
         }
 
