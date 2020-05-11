@@ -15,8 +15,9 @@ namespace Blog.Controllers
         public ActionResult Index()
         {
 
-            //获取数据  怎么  反思
+            //获取数据  怎么  反思  请反思  有问题
             //----------------------
+            //测试
             List<Articles> lis = ArticleServices.GetArticles();
 
             return View(lis);
